@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap')
+
+*
+  margin: 0
+  padding: 0
+  overflow: hidden
+  font-family: 'Open Sans', sans-serif
+
+body
+  background: white
+  .container
+    display: grid
+    grid-template-areas: "img img img page page"
+    grid-template-columns: 1fr 40%
+    overflow: hidden
+    .img
+      grid-area: "img"
+      img
+        position: relative
+        width: 100%
+        height: 145vh
+        top: -30%
+    .login-container
+      background: #FAFAFA
+      grid-area: "page"
+      padding: 10%
+      .login
+        color: #362222
+        #2
+          font-weight: bolder
+        .login-page
+          display: flex
+          flex-direction: column
+          justify-content: center
+          text-align: center
+          margin-top: 20%
+          h2
+            color: black
+          form
+            margin: 0 auto
+            display: flex
+            flex-direction: column
+            .form-format
+              margin: 10px
+              label
+                font-size: 20px
+                left: -30px
+              input
+                font-size: 20px
+                border: none
+                border-bottom: 1px solid black
+                outline: none
+                padding: 3px
+                background: none
+            a
+              text-decoration: none
+              font-style: none
+              right: 0
+              color: #4A403A
+              margin: 15px
+              padding-left: 35%
+            button
+              margin: 0 auto
+              border: none
+              color: white
+              outline: none
+              width: 70%
+              height: 40px
+              background: #4A403A

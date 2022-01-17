@@ -1,0 +1,10 @@
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username": "yuda"
+}
+
+####
+GET http://localhost:8000/home
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoieXVkYSIsImlhdCI6MTY0MjIyMDc2M30.FV3TzzaIQ6wGk6_oyZbwh80m5n13gCc3nIZCPVSRMEo
