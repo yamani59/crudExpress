@@ -25,16 +25,6 @@ app.use((req, res, next) => {
   next()
 })
 
-const posts = [
-  {
-    username: 'yamani',
-    title: 'post 1'
-  },
-  {
-    username: 'yuda',
-    title: 'post 2'
-  }
-]
 
 const routes = require('./routes')
 app.use('/', routes)

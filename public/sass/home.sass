@@ -14,20 +14,20 @@ body
     grid-template-columns: 1fr 40%
     overflow: hidden
     .img
+      height: 100vh
       grid-area: "img"
-      img
-        position: relative
-        width: 100%
-        height: 145vh
-        top: -30%
+      background: url('../assets/Sene-20.jpg')
+      background-position: left
+      background-repeat: no-repeat
+      background-size: cover
     .login-container
-      background: #FAFAFA
+      background: #EEEEEE
       grid-area: "page"
       padding: 10%
       .login
-        color: #362222
+        color: #FF4646
         #2
-          font-weight: bolder
+          // font-size: 100px
         .login-page
           display: flex
           flex-direction: column
@@ -36,6 +36,14 @@ body
           margin-top: 20%
           h2
             color: black
+            margin-bottom: 5%
+          a
+            text-decoration: none
+            font-style: none
+            right: 0
+            color: #FF4646
+            margin: 15px
+            padding-left: 35%
           form
             margin: 0 auto
             display: flex
@@ -45,10 +53,12 @@ body
               label
                 font-size: 20px
                 left: -30px
+                color: black
+                padding-right: 100%
               input
                 font-size: 20px
                 border: none
-                border-bottom: 1px solid black
+                border-bottom: 1px solid #929292
                 outline: none
                 padding: 3px
                 background: none
@@ -56,9 +66,10 @@ body
               text-decoration: none
               font-style: none
               right: 0
-              color: #4A403A
+              color: #FF4646
               margin: 15px
               padding-left: 35%
+
             button
               margin: 0 auto
               border: none
@@ -66,4 +77,4 @@ body
               outline: none
               width: 70%
               height: 40px
-              background: #4A403A
+              background: #FF4646

@@ -1,30 +1,22 @@
 const route = require('express').Router()
-
-route.route('/login')
-  .get((req, res) => {
-    res.json({ nama: 'yamani' })
-  })
-  .post((req, res) => {
-    console.log(req.sessionID)
-    console.log(req.session)
-
-    const { username, password } = req.body
-    if (username && password) {
-      if (req.session.authenticated) res.json({ session: req.session })
-      if (password === '12345678') {
-        req.session.authenticated = true
-        req.session.user = { username, password }
-        res.locals.nama = 'yamani'
-        console.log(res.locals)
-        res.json(req.session)
-      }
-    }
-    res.status(403).json({ msg: 'Bad Credentials' })
-  })
+const { user } = require('../models')
+const { auth } = require('../middleware')
 
 route.route('/')
   .get((req, res) => {
-    res.render('home')
+    if (req.session.loggedIn)
+      res.
+        res.render('home')
+  })
+  .post(auth.sanitizer, auth.loginValidasi, (req, res) => {
+    req.session.username = res.locals.username
+    req.session.loggedIn = true
+    res.redirect('dashboard')
+  })
+
+route.route('/reg')
+  .get((req, res) => {
+    res.render('req')
   })
 
 module.exports = route
