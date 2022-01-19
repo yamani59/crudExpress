@@ -16,8 +16,6 @@ module.exports = {
     user.getDataBy(username)
       .then(response => {
         const getUser = response[0][0]
-        console.log(getUser.password)
-        console.log(password)
         if (username === getUser.username) {
           if (password !== getUser.password)
             throw new Error('login failed')

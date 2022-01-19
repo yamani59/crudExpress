@@ -17,9 +17,7 @@ module.exports = {
     connection.query(
       `
       INSERT INTO users SET ?
-      `, [cleanData], (err, result) => {
-      if (err) throw err
-    }
+      `, [cleanData]
     )
   },
 

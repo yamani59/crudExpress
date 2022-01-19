@@ -21,7 +21,6 @@ app.use(session({
 app.set('view engine', 'ejs')
 
 app.use((req, res, next) => {
-  console.log(store)
   next()
 })
 
